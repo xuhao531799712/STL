@@ -478,4 +478,13 @@ void deque<T, Alloc, BufSize>::insert_aux(iterator pos,
 
 ## 总结
 
+1. 在开头或末尾插入、删除元素的时间复杂度为O(1)，这是它和vector的主要区别。
+2. 随机访问的时间复杂度为O(1)，这是它和list的主要区别。
+
+实际上虽然deque的时间复杂度看起来完败vector，但实际上deque要维护复杂度数据结构，其隐含在O()标记中的常数因子要比vector大得多。一切情况下vector的性能要好于deque。但用于做队列，元素从一端进一端出的情况它还是很适合的。
+
+对deque进行排序时，先复制到vector中排序再拷贝回去往往效率更高。
+
 本节分析了一部分关于`insert`的源码, `deque`的也暂时分析完了, 下节就开始分析其他的序列容器了.
+
+start
