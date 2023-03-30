@@ -6,6 +6,7 @@
 
 `queue`数据都是在头部进行操作的, 之允许进行push和pop操作.
 
+`queue`的底层容器必须提供这些操作：front()、back()、push_back()、pop_front()、empty() 和 size()。
 
 
 ### queue分析
