@@ -344,3 +344,4 @@ void list<T, Alloc>::insert(iterator position, size_type n, const T& x) {
 
 1.  **节点实际是以`node`空节点开始的**
 2.  **插入操作是将元素插入到指定位置的前一个地址进行插入的.**
+3.  **单独说insert和erase的时间复杂度的时候是在已经拿到迭代器的情况，而不是把随机查找的复杂度也算上.**
